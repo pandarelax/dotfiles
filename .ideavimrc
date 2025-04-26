@@ -1,0 +1,56 @@
+let mapleader = " "
+
+set surround
+set clipboard+=unnamed
+set multiple-cursors
+set easymotion
+set commentary
+
+" Common specific settings
+set showmode
+set incsearch
+set nu
+set relativenumber
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = "500"
+let g:highlightedyank_highlight_color = "rgba(57, 62, 65, 255)"
+
+" IDEA specific settings
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+nmap <leader>h <action>(PreviousTab)
+nmap <leader>l <action>(NextTab)
+nmap <leader>q <action>(CloseEditor)
+nmap <leader>w <action>(Save)
+nmap <leader>i <action>(Generate)
+nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(SplitHorizontally)
+nmap <leader>v <action>(SplitVertically)
+nmap <leader>/ <action>(ShowErrorDescription)
+nmap <leader>e <action>(GotoNextError)
+nmap <leader>k <action>(MoveLineUp)
+nmap <leader>j <action>(MoveLineDown)
+nmap <leader>R <action>(Refactorings.QuickListPopupAction)
+nmap <leader>d dd
+nmap ms <action>(MaximizeEditorInSplit)
+
+map <leader>c <action>(CommentByLineComment)
+map ff <action>(AceAction)
+map <C-n> <Plug>(NextWholeOccurrence)
+map <C-a> ggVG
+
+" Move between splits
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+vmap <S-j> <action>(MoveLineDown)
+vmap <S-k> <action>(MoveLineUp)
+  
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
