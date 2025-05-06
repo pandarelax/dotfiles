@@ -35,7 +35,8 @@ noremap <leader>nr :set rnu<CR>
 " `<leader> + w(indow) + p(in)` - Toggle the pin status of the document
 " `<leader> + w(indows) + c(lose) + a(ll)` - Close all unpinned documents
 " noremap <leader>wp :vsc Window.PinTab<CR>
-noremap <leader>qa :vsc Window.CloseAllButPinned<CR>
+noremap <leader>qo :vsc File.CloseOtherTabs<CR>
+noremap <leader>qa :vsc Window.CloseAllDocuments<CR>
 noremap <leader>x :vsc Window.CloseDocumentWindow<CR>
 noremap <leader>w :vsc File.SaveSelectedItems<CR>
 

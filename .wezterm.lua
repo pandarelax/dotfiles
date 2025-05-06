@@ -13,7 +13,7 @@ config.default_prog = { 'powershell' }
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'GruvboxDarkHard'
+config.color_scheme = 'Catppuccin Frappe'
 
 -- and finally, return the configuration to wezterm
 return config

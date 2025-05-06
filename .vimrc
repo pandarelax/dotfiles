@@ -3,6 +3,7 @@ call plug#begin()
 " List your plugins here
 Plug 'https://tpope.io/vim/commentary.git'
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 call plug#end()
 
@@ -11,11 +12,14 @@ set clipboard+=unnamed
 let mapleader=' ' "use space for leader key
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+let g:lightline = { 'colorscheme': 'catppuccin_frappe'}
 
 filetype plugin indent on
 
 " General visual look of Vim
-colorscheme=gruvbox
+" colorscheme gruvbox
+colorscheme catppuccin_frappe
+set termguicolors
 set number relativenumber
 set nocompatible
 set cursorline

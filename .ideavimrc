@@ -21,9 +21,9 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-nmap <leader>h <action>(PreviousTab)
-nmap <leader>l <action>(NextTab)
-nmap <leader>q <action>(CloseEditor)
+nmap <S-h> <action>(PreviousTab)
+nmap <S-l> <action>(NextTab)
+nmap <leader>x <action>(CloseEditor)
 nmap <leader>w <action>(Save)
 nmap <leader>i <action>(Generate)
 nmap <leader>m <action>(Git.Menu)
@@ -37,7 +37,6 @@ nmap <leader>R <action>(Refactorings.QuickListPopupAction)
 nmap <leader>d dd
 nmap ms <action>(MaximizeEditorInSplit)
 
-map <leader>c <action>(CommentByLineComment)
 map ff <action>(AceAction)
 map <C-n> <Plug>(NextWholeOccurrence)
 map <C-a> ggVG
@@ -50,6 +49,14 @@ nmap <C-l> <C-w>l
 
 vmap <S-j> <action>(MoveLineDown)
 vmap <S-k> <action>(MoveLineUp)
+imap jj <Esc>
+
+nnoremap > >>
+nnoremap < <<
+vnoremap > <action>(EditorIndentSelection)
+vnoremap < <action>(EditorUnindentSelection)
+
+nnoremap :action CommentByLineComment<CR>
   
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
