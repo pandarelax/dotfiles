@@ -56,16 +56,17 @@ return {
   --       },
   --     },
   --   },
-  {
-    "webhooked/kanso.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-  -- { "rebelot/kanagawa.nvim" },
+  -- {
+  --   "webhooked/kanso.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
+  { "rebelot/kanagawa.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "kanso-mist",
+      -- colorscheme = "kanso-mist",
+      colorscheme = "kanagawa",
     },
   },
 }

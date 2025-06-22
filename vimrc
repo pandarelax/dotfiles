@@ -8,7 +8,7 @@ Plug 'menisadi/kanagawa.vim'
 
 call plug#end()
 
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 
 let mapleader=' ' "use space for leader key
 let &t_SI = "\e[6 q"
