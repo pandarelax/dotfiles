@@ -1,0 +1,9 @@
+[user]
+  name = Efehan Turhan
+  email = efehanturhan@gmail.com
+
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  br = branch
