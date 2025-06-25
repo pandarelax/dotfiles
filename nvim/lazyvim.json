@@ -1,8 +1,10 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.inc-rename",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.angular",
+    "lazyvim.plugins.extras.lang.astro",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.git",
     "lazyvim.plugins.extras.lang.go",
@@ -18,7 +20,8 @@
     "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.linting.eslint",
     "lazyvim.plugins.extras.test.core",
-    "lazyvim.plugins.extras.util.dot"
+    "lazyvim.plugins.extras.util.dot",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
   ],
   "install_version": 8,
   "news": {
