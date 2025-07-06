@@ -11,7 +11,7 @@ done
 # Symlink oluştur
 ln -sf "$DOTFILES/.zshrc" "$HOME/.zshrc"
 ln -sf "$DOTFILES/gitconfig" "$HOME/.gitconfig"
-ln -sf "$DOTFILES/aliases.zsh" "$HOME/aliases.zsh"
+# ln -sf "$DOTFILES/aliases.zsh" "$HOME/aliases.zsh"
 ln -sf "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 
 # WezTerm config klasörü
