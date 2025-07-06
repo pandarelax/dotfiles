@@ -7,9 +7,10 @@ local act = wezterm.action
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
+	{ key = "f", mods = "LEADER|ALT", action = act.Search({ CaseSensitiveString = "" }) },
 	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
 	{ key = "o", mods = "LEADER|ALT", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "w", mods = "LEADER|ALT", action = act.CloseCurrentTab({ confirm = false }) },
+	{ key = "q", mods = "LEADER|ALT", action = act.CloseCurrentTab({ confirm = false }) },
 	{ key = "p", mods = "LEADER|ALT", action = act.ActivateTabRelative(-1) },
 	{ key = "n", mods = "LEADER|ALT", action = act.ActivateTabRelative(1) },
 	{ key = "-", mods = "LEADER|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
@@ -22,6 +23,18 @@ config.keys = {
 	{ key = "LeftArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Left", 5 }) },
 	{ key = "DownArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Down", 5 }) },
 	{ key = "UpArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Up", 5 }) },
+	{
+		key = ",",
+		mods = "LEADER|ALT",
+		action = act.PromptInputLine({
+			description = "Enter new name for tab",
+			action = wezterm.action_callback(function(window, _, line)
+				if line then
+					window:active_tab():set_title(line)
+				end
+			end),
+		}),
+	},
 }
 config.default_prog = { "powershell" }
 
