@@ -5,11 +5,23 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
 
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "v", mods = "CTRL", action = act.PasteFrom("Clipboard") },
-	{ key = "n", mods = "LEADER|CTRL", action = act.SpawnTab("CurrentPaneDomain") },
-	{ key = "w", mods = "LEADER|CTRL", action = act.CloseCurrentTab({ confirm = false }) },
+	{ key = "o", mods = "LEADER|ALT", action = act.SpawnTab("CurrentPaneDomain") },
+	{ key = "w", mods = "LEADER|ALT", action = act.CloseCurrentTab({ confirm = false }) },
+	{ key = "p", mods = "LEADER|ALT", action = act.ActivateTabRelative(-1) },
+	{ key = "n", mods = "LEADER|ALT", action = act.ActivateTabRelative(1) },
+	{ key = "-", mods = "LEADER|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ key = "ü", mods = "LEADER|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "h", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Left") },
+	{ key = "j", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Down") },
+	{ key = "k", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Up") },
+	{ key = "l", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Right") },
+	{ key = "RightArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Right", 5 }) },
+	{ key = "LeftArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Left", 5 }) },
+	{ key = "DownArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Down", 5 }) },
+	{ key = "UpArrow", mods = "LEADER|ALT", action = act.AdjustPaneSize({ "Up", 5 }) },
 }
 config.default_prog = { "powershell" }
 
