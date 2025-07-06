@@ -35,6 +35,8 @@ alias egrep='egrep --color=auto'
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 
+source /usr/share/wezterm/wezterm.sh
+
 # Zsh plugins (manuel veya antibody/oh-my-zsh ile)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

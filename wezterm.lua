@@ -5,6 +5,15 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
 
+config.default_domain = "WSL:Ubuntu"
+config.wsl_domains = {
+	{
+		name = "WSL:Ubuntu",
+		distribution = "Ubuntu",
+		default_cwd = "~",
+	},
+}
+
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
 	{ key = "f", mods = "LEADER|ALT", action = act.Search({ CaseSensitiveString = "" }) },
@@ -46,7 +55,31 @@ config.font_size = 10.0
 config.color_scheme = "Kanagawa (Gogh)"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
+config.hide_tab_bar_if_only_one_tab = false
 -- config.color_scheme = "Catppuccin Frappé (Gogh)"
+--
+-- tmux status
+wezterm.on("update-right-status", function(window, _)
+	local SOLID_LEFT_ARROW = ""
+	local ARROW_FOREGROUND = { Foreground = { Color = "#c6a0f6" } }
+	local prefix = ""
+
+	if window:leader_is_active() then
+		prefix = " " .. utf8.char(0x1f30a) -- ocean wave
+		SOLID_LEFT_ARROW = utf8.char(0xe0b2)
+	end
+
+	if window:active_tab():tab_id() ~= 0 then
+		ARROW_FOREGROUND = { Foreground = { Color = "#1e2030" } }
+	end -- arrow color based on if tab is first pane
+
+	window:set_left_status(wezterm.format({
+		{ Background = { Color = "#b7bdf8" } },
+		{ Text = prefix },
+		ARROW_FOREGROUND,
+		{ Text = SOLID_LEFT_ARROW },
+	}))
+end)
 
 -- Kanso Theme - Mist
 -- config.force_reverse_video_cursor = true
