@@ -1,0 +1,79 @@
+# ~/.config/starship.toml
+
+# Renk Paleti
+[color_palette]
+background = "#1f1f28"
+foreground = "#dcd7ba"
+black = "#1f1f28"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
+bright_black = "#414868"
+bright_red = "#f7768e"
+bright_green = "#9ece6a"
+bright_yellow = "#e0af68"
+bright_blue = "#7aa2f7"
+bright_magenta = "#bb9af7"
+bright_cyan = "#7dcfff"
+bright_white = "#a9b1d6"
+
+# Genel Ayarlar
+add_newline = true
+command_timeout = 1000
+
+# Karakter Modülü
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✖](bold red)"
+
+# Dizin Modülü
+[directory]
+truncation_length = 3
+style = "bold blue"
+read_only = " "
+
+# Git Dalı Modülü
+[git_branch]
+symbol = " "
+style = "bold yellow"
+
+# Git Durumu Modülü
+[git_status]
+style = "bold red"
+conflicted = ""
+ahead = "⇡ "
+behind = "⇣ "
+diverged = "⇕ "
+untracked = "… "
+staged = "✓ "
+modified = "✎ "
+renamed = "➜ "
+deleted = "🗑️ "
+
+# Paket Modülü
+[package]
+disabled = true
+
+# Go Modülü
+[go]
+style = "bold cyan"
+
+# Python Modülü
+[python]
+style = "bold magenta"
+
+# Node.js Modülü
+[nodejs]
+style = "bold green"
+
+# Rust Modülü
+[rust]
+style = "bold red"
+
+# Docker Modülü
+[docker_context]
+style = "bold blue"
