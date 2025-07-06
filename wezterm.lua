@@ -4,15 +4,10 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 local act = wezterm.action
+local wsl = wezterm.default_wsl_domains()
 
-config.default_domain = "WSL:Ubuntu"
-config.wsl_domains = {
-	{
-		name = "WSL:Ubuntu",
-		distribution = "Ubuntu",
-		default_cwd = "~",
-	},
-}
+-- config.default_domain = "WSL:Ubuntu"
+config.wsl_domains = wsl
 
 config.leader = { key = "a", mods = "ALT", timeout_milliseconds = 1000 }
 config.keys = {
