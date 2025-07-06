@@ -16,9 +16,12 @@ config.default_prog = { "powershell" }
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
+config.font_size = 10.0
+
 config.color_scheme = "Kanagawa (Gogh)"
+config.use_fancy_tab_bar = false
+config.tab_bar_at_bottom = true
 -- config.color_scheme = "Catppuccin Frappé (Gogh)"
---
 
 -- Kanso Theme - Mist
 -- config.force_reverse_video_cursor = true
