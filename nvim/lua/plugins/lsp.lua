@@ -5,7 +5,8 @@ return {
       servers = {
         buf_ls = {
           cmd = {
-            "/nix/store/vnm41rr063lxmfhfgd08cvav5ds1637y-buf-with-plugins-1.52.1/bin/buf",
+            (vim.fn.exepath("buf") ~= "" and vim.fn.exepath("buf"))
+              or "/nix/store/vnm41rr063lxmfhfgd08cvav5ds1637y-buf-with-plugins-1.52.1/bin/buf",
             "beta",
             "lsp",
             "--timeout",
