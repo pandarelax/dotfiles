@@ -62,11 +62,13 @@ return {
     priority = 1000,
   },
   { "rebelot/kanagawa.nvim" },
+  { "sainnhe/everforest" },
+  { "sainnhe/gruvbox-material" },
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "kanso-mist",
-      colorscheme = "kanagawa",
+      colorscheme = "everforest",
     },
   },
 }
