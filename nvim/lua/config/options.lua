@@ -6,5 +6,6 @@
 local opt = vim.opt
 
 opt.clipboard = "unnamedplus"
+opt.wrap = true
 
 vim.g.nofsync = true

@@ -7,5 +7,4 @@ local map = vim.keymap.set
 map("i", "jj", "<esc>", { desc = "Escape insert mode" })
 map("i", "<C-l>", "<Right>", { remap = true })
 map("i", "<C-h>", "<Left>", { remap = true })
-map("x", "p", "P", { silent = true })
-map("n", "<leader>ü", "<C-W>v", { desc = "Split Window Right", remap = true })
+map("n", "<C-a>", ":%y<CR>", { noremap = true, silent = false, desc = "Copy all" })
