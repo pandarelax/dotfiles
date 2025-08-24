@@ -18,7 +18,7 @@ config.keys = {
 	{ key = "p", mods = "LEADER|ALT", action = act.ActivateTabRelative(-1) },
 	{ key = "n", mods = "LEADER|ALT", action = act.ActivateTabRelative(1) },
 	{ key = "-", mods = "LEADER|ALT", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
-	{ key = "ü", mods = "LEADER|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+	{ key = "\\", mods = "LEADER|ALT", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ key = "h", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Left") },
 	{ key = "j", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Down") },
 	{ key = "k", mods = "LEADER|ALT", action = act.ActivatePaneDirection("Up") },
@@ -47,10 +47,10 @@ config.default_prog = { "powershell" }
 -- For example, changing the color scheme:
 config.font_size = 10.0
 
-config.color_scheme = "Kanagawa (Gogh)"
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.hide_tab_bar_if_only_one_tab = false
+-- config.color_scheme = "Everforest Dark (Gogh)"
 -- config.color_scheme = "Catppuccin Frappé (Gogh)"
 --
 -- tmux status
@@ -77,42 +77,41 @@ wezterm.on("update-right-status", function(window, _)
 end)
 
 -- Kanso Theme - Mist
--- config.force_reverse_video_cursor = true
--- config.colors = {
--- 	foreground = "#C5C9C7",
--- 	background = "#22262D",
---
--- 	cursor_bg = "#C5C9C7",
--- 	cursor_fg = "#22262D",
--- 	cursor_border = "#C5C9C7",
---
--- 	selection_fg = "#C5C9C7",
--- 	selection_bg = "#43464E",
---
--- 	scrollbar_thumb = "#43464E",
--- 	split = "#43464E",
---
--- 	ansi = {
--- 		"#22262D",
--- 		"#C4746E",
--- 		"#8A9A7B",
--- 		"#C4B28A",
--- 		"#8BA4B0",
--- 		"#A292A3",
--- 		"#8EA4A2",
--- 		"#a4a7a4",
--- 	},
--- 	brights = {
--- 		"#5C6066",
--- 		"#E46876",
--- 		"#87A987",
--- 		"#E6C384",
--- 		"#7FB4CA",
--- 		"#938AA9",
--- 		"#7AA89F",
--- 		"#C5C9C7",
--- 	},
--- }
+config.force_reverse_video_cursor = true
+config.colors = {
+	foreground = "#C5C9C7",
+	background = "#14171d",
 
--- and finally, return the configuration to wezterm
+	cursor_bg = "#C5C9C7",
+	cursor_fg = "#14171d",
+	cursor_border = "#C5C9C7",
+
+	selection_fg = "#C5C9C7",
+	selection_bg = "#393B44",
+
+	scrollbar_thumb = "#393B44",
+	split = "#393B44",
+
+	ansi = {
+		"#14171d",
+		"#C4746E",
+		"#8A9A7B",
+		"#C4B28A",
+		"#8BA4B0",
+		"#A292A3",
+		"#8EA4A2",
+		"#A4A7A4",
+	},
+	brights = {
+		"#A4A7A4",
+		"#E46876",
+		"#87A987",
+		"#E6C384",
+		"#7FB4CA",
+		"#938AA9",
+		"#7AA89F",
+		"#C5C9C7",
+	},
+}
+
 return config
